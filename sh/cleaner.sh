@@ -8,4 +8,6 @@ DIR=$(cd $(dirname $0)/.. && pwd)
 cd ${DIR}
 
 # remove images more than 180 days.
-find ./images/ -mtime +180 -exec rm -f {} \;
+if [ -d images ]; then
+  find ./images/ -mtime +180 -exec rm -f {} \;
+fi
