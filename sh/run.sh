@@ -27,6 +27,7 @@ __build() {
 
   # build application
   go build -o ${DIR_BIN}/${APP_FILE} src/main.go
+  echo "application was built successfully."
 }
 
 __start() {
